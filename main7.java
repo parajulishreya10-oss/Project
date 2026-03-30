@@ -1,0 +1,17 @@
+import javax.management.RuntimeErrorException;
+
+public class EXCP{
+    public static void main7(String[] args) {
+        try{
+            int [] n=new int[5];
+            int divisor=0;
+            for(int i=0;i<n.length; i++){
+                int res=n[i]/divisor;
+                System.out.println(res);
+            }
+        }catch(ArithmeticException e){
+            throw new RuntimeErrorException;
+            System.out.println("Error: Division by zero occured:",e );
+        }
+    }
+}
